@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ChrisnDave</title>
+<script type="text/javascript">
+
+
+ function countdown() {
+	var dDay = new Date(2015,06,06,17,00,00,00);
+	 var today = new Date();
+	 var todaySeconds = today.getTime();
+	 var dDaySeconds = dDay.getTime();
+	 var difference = dDaySeconds - todaySeconds;
+	 var count = difference/(1000*60*60*24); 
+	 if (count>=0) {
+		 document.getElementById('date').innerHTML="Days until the wedding: "+Math.round(count);  
+	 }
+	 else {
+		  document.getElementById('date').innerHTML="We've been married for: "+Math.round(count)+" days!";
+	 }
+ }
+
+
+
+ function loadContent() {
+	 	
+		
+	var contentElements = document.getElementsByClassName('content');
+	 for (i=0; i<contentElements.length; i++) {
+	 contentElements[i].style.display="none";
+	 } 
+	 
+	 var hashTag = location.hash.replace('#', '');
+	 if (hashTag=='') {
+		document.getElementById('home').style.display="block";
+		 }
+	 else {
+		 document.getElementById(hashTag).style.display="block";
+	 	}
+		
+		countdown();
+
+ }
+ 
+ 
+ var imageCount = 0; 
+ 
+ function switchImage() {
+	 var images = ["ChrisNDave.jpg","KissOnTheBeach.jpg", "GiantsGame.jpg", "Kayak.jpg", "Denmark.jpg", "5thReunion.jpg", "Hawaii.jpg",  "AandSWedding.jpg"];
+	 var captions = ["Chris and Dave on the morning we got engaged, December 14, 2013.",
+	 "At Sea Ranch for New Year's 2014. Photo credit Zack Reiss-Davis.", 
+	 "Behind home plate at a Giants game! Note Buster Posey taking the field behind us.",
+	 "Kayaking in Siesta Key.", 
+	 "Arriving in Copenhagen, October 2012.", 
+	 "At our 5th class reunion at Brown University, May 2012.", 
+	 "Vacationing in Hawaii, May 2011.",
+	 "Signing the guest book at Adam and Stephanie's wedding, June 2013."
+	 ];
+	 if(imageCount<(images.length-1)){
+	 	imageCount++;
+	 }
+	 else {
+		imageCount=0; 
+	 }
+	 document.getElementById('homeImage').src=images[imageCount];
+	 document.getElementById('homeImageCaption').innerHTML=captions[imageCount];
+ }
+ 
+
+
+</script>
+<style type="text/css">
+@font-face {
+font-family: Headline;
+src: url(Windsong.ttf);
+}
+ @font-face {
+font-family:Body;
+src: url(Garogier.ttf);
+}
+body {
+	background-color:#faddc6;
+	text-align:center;
+	background-image:url(Skylight_Pattern_Double.png);
+	background-size:50px;
+	/* background-repeat:repeat-x;
+	background-position:0 200px;
+ */	font-family:Body;
+	margin:0;
+}
+.headerImage {
+	position:relative;
+	display:block;
+	clear:both;
+	margin:10px auto;
+}
+#main {
+	background-color: #faf6f3;
+	position:relative;
+	display:inline-block;
+	clear:both;
+	text-align:center;
+	margin:0px auto;
+	color:#333;
+	box-shadow: 2px 2px 5px 5px #e2cab7;
+}
+#nav {
+	background-color: #ccd6ca;
+	height:auto;
+	font-weight:normal;
+}
+#nav div {
+	display:inline-block;
+	padding:10px;
+}
+#nav div a {
+	text-decoration:none;
+	color:#ffffff;
+}
+#nav div a:hover {
+	color:#F66;
+}
+.content {
+	text-align:left;
+	padding:20px;
+	width:700px;
+	display:none;
+}
+.content img {
+	width:100%;
+}
+.subnav {
+	text-align:center;
+	margin:10px;
+}
+#weddingparty img {
+	height:auto;
+	width:35%;
+	float:left;
+	margin-right:10px;
+}
+#weddingparty div {
+	display:block;
+	float:left;
+	height:auto;
+	clear:both;
+	margin-bottom:10px;
+	width:100%;
+}
+
+#venue img {
+	width:75%;	
+}
+.caption {
+	font-size:16px;
+	font-style:italic;
+}
+h1 {
+	margin:.5em auto -.2em auto;
+	line-height:96px;
+	color:#00526a;
+	font-size:104px;
+	font-family:Headline;
+	font-weight:normal;
+	width:100%;
+	background-color:#faddc6;
+}
+h2 {
+	color:#00526a;
+	margin:0;
+	font-size:32px;
+	margin:0 0 5px 0;
+	font-weight:normal;
+}
+h3 {
+	font-size:24px;
+	margin:0 0 5px 0;
+	font-weight:normal;
+}
+strong {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+}
+ @media only screen and (max-width : 700px) {
+ body {
+ background-image:none;
+}
+ #main {
+ clear:both;
+ text-align:center;
+ margin:0;
+ color:#333;
+ box-shadow: none;
+ width:100%;
+}
+ .content {
+ width:90%;
+}
+ #nav div {
+ padding:5px;
+}
+ h1 {
+ font-size:48px;
+ line-height:48px;
+}
+}
+</style>
+</head>
+
+<body onLoad="loadContent();" onhashchange="loadContent();" >
+
+<!-- h1>Christine and David<br/><span style="font-size:36px">Get Married</span></h1> -->
+<h1>Christine and David</h1>
+<div id="main">
+<div id="nav">
+  <div><a href="#home">Home</a></div>
+  <div><a href="#venue">Getting Here</a></div>
+  <div><a href="#registry">Registry</a></div>
+  <div><a href="#story">Our Story</a></div>
+  <div><a href="#weddingparty">Wedding Party</a></div>
+  <!-- <div><a>Directions & Logistics</a></div>
+         <div><a>Registry</a></div>-->
+  <div><a href="#rsvp">RSVP</a></div>
+</div>
+
+<div class="content" id="home">
+  <h2><strong>Welcome</strong></h2>
+  
+  <div id="date">#</div>
+  <p>Dave and Cristi are getting hitched! Look around to learn more about our story, our plans, and our friends and family. Information about our wedding venue, RSVPs, and registry is coming soon!<br />
+    <br />
+    Click the picture below to see more. </p>
+  <img id="homeImage" src="ChrisNDave.jpg" onclick="switchImage();" />
+  <p id="homeImageCaption">Chris and Dave on the morning we got engaged, December 14, 2013.</p>
+</div>
+
+
+<div class="content" id="venue">
+  <h2><strong>Join Us June 6 in  San Francisco</strong></h2>
+ <div class="subnav"> Jump to: <a href="">Map</a> <a href="#hotel">Hotels</a> <a href="#todo">Things to Do</a></div> 
+  <div>
+  <img src="http://media-cache-ak0.pinimg.com/736x/70/c5/d5/70c5d53f4da017754c2753d09a537b46.jpg" style="float:right; width:50%; margin-left:8px; margin-bottom:8px" />
+The wedding will take place at 5pm at the Queen Wilhelmina Tulip Garden in San Francisco, at the far west end of Golden Gate Park. Reception to follow at the Park Chalet restaurant.
+</div>
+  
+  <h3>Map of the Venue</h3>
+  <!-- Embed Google Map -->
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:500px;width:600px;"><div id="gmap_canvas" style="height:500px;width:100%;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.mapembed.com" id="get-map-data">www.mapembed.com</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(37.7694595,-122.51020370000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.7694595, -122.51020370000003)});infowindow = new google.maps.InfoWindow({content:"<b>Park Chalet</b><br/>1000 Great Hwy<br/>94121 San Francisco" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});}google.maps.event.addDomListener(window, 'load', init_map);</script>
+   <!-- End Embed Google Map -->
+  
+    <h3><a name="hotel"></a>Hotel Information</h3>
+    
+    
+    
+    
+      <h3><a name="todo"></a>Things to Do While You're Here</h3>
+   
+  
+    <div class="subnav"><a href="#venue">Top</a> </div>
+</div>
+
+
+<div class="content" id="registry">
+	Coming soon!
+</div>
+
+
+<div class="content" id="story">
+  <h2><strong>Our Story</strong></h2>
+  <h3>Meeting</h3>
+  Cristi and Dave met over ten years ago at the Presidential Scholars recognition week in Washington D.C., during the summer of 2003. They had just graduated from high school and been accepted to Brown University. Though they were both dating other people at the time, they had an immediate respect for each others' intelligence and curiosity about the world, and became friends. <br />
+  <br />
+  At Brown the following fall, Cristi and Dave lived in the same freshman dorm building, and played poker and Settlers of Catan together with their friends. Cristi especially knew very few people entering Brown, and was always happy to see Dave's familiar face! <br />
+  <br />
+  Dave studied computer science, advancing in the department and making many life-long friends, including all three of his groomsmen. Cristi deepened her love of language, choosing linguistics as a major, and writing for the College Hill Independent. At the end of sophomore year, their disparate groups of friends brought them back together by bringing them to rush events at Alpha Delta Phi, a coed fraternity. When they saw each other at these events, they both thought the same thing: "If a reasonable person like Dave/Cristi is doing this, it must be OK!", and so tricked themselves into pledging. <br />
+  <br />
+  <h3>Alpha Delta Phi</h3>
+  At Alpha Delta Phi, they had the opportunity to work together in new ways on events and as officers. Dave admired Cristi's creativity and fun-loving spirit, and Cristi was especially impressed by Dave's leadership qualities when he was elected president. It wasn't long before Groomsman Bill would declare her 'first lady'. <br />
+  <br />
+  In the spring of their senior year, when they were finally both single at the same time, Dave revealed to a mutual friend that he had a crush on Cristi. Coincidentally, Cristi revealed to the same friend that she couldn't imagine ever finding a more loyal and honest man than Dave. Beans were spilled, and within a few weeks, Cristi had knocked on Dave's dorm room door, and declared her feelings, which Dave heard with measured, thoughtful demeanor. She left, sure that she had ruined their long-standing friendship. Fifteen agonizing minutes later, Dave appeared at <em>her</em> door, and declared that he felt the same way! <br />
+  <br />
+  This might have been 'happily ever after' except that Dave was ready to move to San Francisco to take a job at Sun Microsystems, while Cristi was returning home to Oklahoma City to take an internship at Oklahoma Today magazine. <br />
+  <br />
+  <h3>After College</h3>
+  They decided to spend the first two weeks of that summer of 2007 driving across the country to situate Dave in San Francisco. If 39,000 miles together didn't drive them apart, nothing could. They pulled into San Francisco two weeks later, and parked on Fair Oaks street, a few blocks from the apartment Dave would share with Stephanie, Adam, and Bill. The great success of that road trip further cemented Dave and Cristi's feelings that they could live together, work together, and do anything together. But they were headed different directions. <br />
+  <br />
+  During the long six months of her internship, Dave and Cristi broke up. They tried to avoid meddling in each other's new lives, but couldn't stay out of touch for long. Abandoning her long-held assumption that she would return to the East Coast to look for a full-time job, Cristi decided that Dave outweighed the entire New York publishing world, and set out to look for jobs in the City by the Bay. <br />
+  <br />
+  In late 2007, both a job and an apartment materialized in San Francisco, and Cristi was off on another road trip, this time just one way. <br />
+  <br />
+  Since then, Dave and Cristi have both lived and worked happily in San Francisco. In summer 2008, they moved in together on the same little street where they'd found parking so long ago. Their apartment on Fair Oaks has seen lots of birthday, New Year's Eve, and Giants viewing parties, and made them realize they didn't want anything more than to continue living together for the rest of their lives. <br />
+  <br />
+  <h3>Proposal</h3>
+  In the fall of 2013, they admitted to each other that they wanted to get married. Dave started shopping around for rings, and Cristi set up a wedding <a href="http://www.pinterest.com/claquer/wedding-stuff/">Pinterest page</a>. As fall ended, Dave suggested they go out at sunset, as they had done many times before, for Cristi to sketch and Dave to photograph the landscape. They agreed on Bernal Hill, but a holiday party prevented them from going in the evening. Cristi unwittingly suggested sunrise instead. <br />
+  <br />
+  On the morning of Saturday, December 12, they got up extremely early and drove to Bernal Hill in San Francisco. Cristi considered that Dave might be up to something, but his calm, measured demeanor belied his surprising intentions. When they got up the hill, Cristi took out her oil pastels and started sketching the landscape, and shooed Dave off to take photos. He came back a few minutes later and began to talk about the city, and all they had been through to get here together. Cristi started to tear up. Dave kneeled down, produced a ring box, and asked Cristi to marry him. She started nodding and crying, and didn't manage to actually say 'yes' until Dave repeatedly asked for confirmation. <br />
+  <br />
+  They spent the rest of the morning drinking the champagne Dave had hidden on the hill the night before, and calling their families, who mostly asked what had taken so long.
+  <div class="subnav"><a href="#story">Top</a> </div>
+  
+</div>
+  
+  <div class="content" id="weddingparty">
+    <h2><strong>Wedding Party</strong></h2>
+    <h3>Bridesmaids: Is there a doctor in the house?</h3>
+    <div><img src="Natalia.jpg" /><strong>Natalia Bilenko</strong>, Maid of Honor<br />
+      Cristi and Natalia met during their freshman year at Brown. Even though Nataila pledged the <em>other</em> coed fraternity on campus, they remained close friends and were thrilled to eventually end up in the Bay Area together. Natalia is a neuroscience PhD student at Berkeley.<br />
+      <span class="caption">Shown here watching the first dance at Adam and Stephanie's wedding in June 2013 with Cristi.</span></div>
+    <div><img src="Stephanie.jpg" /> <strong>Stephanie Greer</strong>, Bridesmaid <br />
+      Stephanie was in Alpha Delta Phi with Dave and Cristi, and now she and her husband Adam live about four blocks from the happy couple in the Mission district. She graduated in 2013 with a PhD in neuroscience from Berkeley, and now works on brain training apps at TidePool.<br />
+      <span class="caption">Shown here on honeymoon in Iceland with Adam.</span></div>
+    <div><img src="Cristy.jpg" /> <strong>Cristina Pacheco</strong>, Bridesmaid, Sister of the Groom <br />
+      Cristy is Dave's older sister by 7 years. She taught him many things including how to read, and that being nice is more important than being right. She is a family doctor in Massachusetts. Cristy and her husband, John Kawaoka, will celebrate their 11th wedding anniversary this June 6. They have two children, flowergirl Maddie, and ringbearer Danny. <br />
+      <span class="caption">Shown here at her wedding with John in 2004.</span></div>
+    <div><img src="Maddie.jpg" /> <strong>Madeleine</strong>, Flower Girl, Niece of the Groom<br />
+      Maddie is the daughter of John Kawaoka and bridesmaid Cristy. She is eight years old and in first grade in Massachusetts. <br />
+      <span class="caption">Shown playing softball.</span> </div>
+    <br />
+    <h3>Groomsmen: They can fix your computer!</h3>
+    <div><img src="Bill.jpg" /> <strong>Bill Pijewski</strong>, Best Man<br />
+      Bill was the pledge master at Alpha Delta Phi when Dave and Cristi pledged. He graduated from Brown with a degree in computer science in 2007 with Dave, Adam, and Dan. He and his wife, Meg Desko are world travelers. They got married in April 2013 and went on safari in Africa for their honeymoon. <br />
+      <span class="caption">Shown on vacation in China with his wife, Meg.</span></div>
+    <div><img src="Adam.jpg" /> <strong>Adam Cath</strong>, Groomsman<br />
+      Adam and his wife, bridesmaid Stephanie, took up hang gliding a few years ago, and Adam now regularly soars at Fort Funston in San Francisco. He plays trumpet in salsa band Conjunto Picante. Adam works at App Dynamics with groomsmen Bill and Dan. <br />
+      <span class="caption">Shown here at his wedding to Stephanie in June 2013.</span> </div>
+    <div><img src="Dan.jpg" /><strong>Dan Heller</strong>, Groomsman <br />
+      Dan Heller is a software engineer who worked at Apple for several years before joining Bill and Adam at App Dynamics. Guaranteed to bring the party, Dan Heller loves music from country western to electronic dance music, is a film buff with an encyclopaedic knowledge of the Simpsons, and also speaks Dutch. <br />
+       <span class="caption">Shown here dancing with Stephanie at Bill and Meg's wedding in April 2013.</span></div>
+    <div><img src="Danny.jpg" /><strong>Danny</strong>, Ringbearer, Nephew of the Groom<br />
+      Danny is two years old. He is the little brother of Maddie, and son of Cristy and John Kawaoka. <br />
+      <span class="caption">Shown here on his first birthday in 2013.</span></div>
+    <br />
+    <div class="subnav"><a href="#weddingparty">Top</a></div>
+  </div>
+  
+  
+  
+<div class="content" id="rsvp">
+Coming soon!
+</div>
+  
+</div> <!-- End Main -->
+
+
+</body>
+</html>
