@@ -128,7 +128,7 @@ body {
 	clear:both;
 	text-align:center;
 	margin:0px auto;
-	color:#333;
+	color:#333333;
 	/*box-shadow: 2px 2px 5px 5px #e2cab7; */
 }
 #nav {
@@ -232,7 +232,9 @@ strong {
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-weight:bold;
 }
- @media screen and (max-width : 480px) {
+
+
+@media screen and (max-width : 480px) {
  body {
  background-image:none;
 }
@@ -240,8 +242,6 @@ strong {
  clear:both;
  text-align:center;
  margin:0;
- color:#333;
- box-shadow: none;
  width:100%;
 }
 
@@ -256,10 +256,12 @@ strong {
 
  .content {
  width:90%;
- position:relative;
+ position:absolute;
  top:34px;
  left:0;
+ overflow:scroll;
  z-index:6;
+ background-color:#ffffff;
 }
 
 #nav { 
