@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Starting App...</title>
+<script>
+
+var uniqueString = window.location.hash.substr(1);
+
+var URL = "tidepool://challenge/" + uniqueString;
+var ANDROID = "https://play.google.com/store/apps/details?id=co.tidepool.tidepoolapp";
+var ITUNES = "itms://itunes.apple.com/us/app/tidepool/id872808619?mt=8";
+var DESKTOP = "http://blog.tidepool.co"; 
+
+function onLoad() {
+
+    if (navigator.userAgent.match(/Android/)) {
+
+        if (navigator.userAgent.match(/Chrome/)) {
+
+            // Jelly Bean with Chrome browser
+            setTimeout(function() {
+                if (!document.webkitHidden)
+                    window.location = ANDROID;
+            }, 1000);
+
+            window.location = URL;
+
+        } else {
+
+            // Older Android browser
+            var iframe = document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "1px";
+            iframe.style.height = "1px";
+            var t = setTimeout(function() {
+                window.location = ANDROID;
+            }, 1000);
+            iframe.onload = function () { clearTimeout(t) };
+            iframe.src = URL;
+            document.body.appendChild(iframe);
+
+        }
+
+     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
+
+         // IOS
+         setTimeout(function() {
+             if (!document.webkitHidden)
+                 window.location = ITUNES;
+         }, 25);
+
+		window.location = URL;
+
+     } else {
+
+         // Not mobile
+         window.location = DESKTOP + '#' + uniqueString;
+     }
+}
+</script>
+  </head>
+  <body onload="onLoad()">
+  </body>
+</html>
