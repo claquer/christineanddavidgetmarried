@@ -44,18 +44,23 @@ function onLoad() {
 
      } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
 
-         // IOS
+       /*  // IOS
          setTimeout(function() {
              if (!document.webkitHidden)
                  window.location = ITUNES;
          }, 25);
+         
+        
+		window.location = URL; */
 
-		window.location = URL;
+alert(URL);
 
      } else {
 
          // Not mobile
-         window.location = DESKTOP + '#' + uniqueString;
+         // window.location = DESKTOP + '#' + uniqueString;
+         
+         alert(URL);
      }
 }
 </script>
