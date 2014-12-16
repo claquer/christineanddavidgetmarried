@@ -45,16 +45,18 @@ function onLoad() {
      } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
 
          // IOS
-        setTimeout(function() {
+   
+	document.write('<h1 style="padding:10px"><a href="'+URL+'" style="color:#000000">If you are not redirected, click here</a><br/><br/><a href="'+ITUNES+'" style="color:#000000">To download the TidePool app, click here</a></h1>');
+
+	window.location = URL; 
+	
+	setTimeout(function() {
              //if (!document.webkitHidden)
                  window.location = ITUNES;
          }, 25);
          
          
-	document.write('<h1 style="padding:10px"><a href="'+URL+'" style="color:#000000">If you are not redirected, click here</a><br/><br/><a href="'+ITUNES+'" style="color:#000000">To download the TidePool app, click here</a></h1>');
-
-	window.location = URL; 
-	
+         
 //	alert(URL);
 
      } else {
