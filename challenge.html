@@ -45,13 +45,13 @@ function onLoad() {
      } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
 
          // IOS
-        /* setTimeout(function() {
-             if (!document.webkitHidden)
+        setTimeout(function() {
+             //if (!document.webkitHidden)
                  window.location = ITUNES;
          }, 25);
-         */
          
-	document.write('<h1><a href="'+URL+'">if you are not redirected, click here</a></h1>');
+         
+	document.write('<h1><a href="'+URL+'" style="color:#000000">if you are not redirected, click here</a></h1>');
 
 		window.location = URL; 
 
