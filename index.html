@@ -109,7 +109,7 @@ body {
 	position:relative;
 	display:block;
 	clear:both;
-	margin:10px auto -20px auto;
+	margin:10px auto -15px auto;
 	z-index:7;
 	width: 550px;
 }
@@ -153,7 +153,7 @@ body {
 	text-align:left;
 	padding:20px;
 	width:700px;
-	display:none;
+	float:left;
 }
 .content img {
 	width:100%;
@@ -161,6 +161,9 @@ body {
 .subnav {
 	text-align:center;
 	margin:10px;
+	width:100%;
+	display:inline-block;
+	clear:both;
 }
 
 #homeImage {
@@ -169,24 +172,23 @@ body {
 
 .clear {
 	clear:both;
-	float:left;
 	margin-bottom:15px;
+	display:inline-block;
 	width:100%;
 }
 
 #weddingparty img {
 	height:auto;
-	width:35%;
+	width:100%;
 	float:left;
-	margin-right:10px;
 }
-#weddingparty div {
+#weddingparty .clear div {
 	display:block;
 	float:left;
-	height:auto;
-	clear:both;
 	margin-bottom:10px;
-	width:100%;
+	margin-right:1%;
+	width:49%;
+	height:250px;
 }
 
 #venue img {
@@ -194,12 +196,15 @@ body {
 }
 
 #story img {
-	width:75%;	
-	margin:10px auto 10px auto;
+	width:50%;	
+	margin-left:auto;
+	margin-right:auto;
 	position:static;
+	display:block;
 }
 
 .caption {
+	display:none;
 	font-size:16px;
 	font-style:italic;
 }
@@ -299,13 +304,13 @@ strong {
 <div id="nav">
   <div><a href="#home">Home</a></div>
   <div><a href="#venue">Getting Here</a></div>
+  <div><a href="#sf">Things to Do</a></div>
  <div><a href="#registry">Registry</a></div>
  
-  <!--  
+
   <div><a href="#story">Our Story</a></div>
   <div><a href="#weddingparty">Wedding Party</a></div>
- <div><a>Directions & Logistics</a></div>
-  <div><a href="#rsvp">RSVP</a></div>-->
+
 </div>
 
 <div class="content" id="home">
@@ -354,13 +359,23 @@ strong {
     To get around the city, we recommend <a href="https://www.uber.com/">Uber</a> or <a href="https://www.lyft.com/">Lyft</a>. These apps allow you to quickly call a car to your location. Taxis are easy to find in some parts of the city, but not near the Park Chalet.<br /><br />
     
     Public transit is very reliable for getting around downtown, Union Square, Mission District, and other neighborhoods in San Francisco. Visit <a href="http://511.org/">511.org</a> for specific route information.<br /><br />
-    
-    
     </div>
+        <div class="clear">
+    	<h3>Bookmark This Website</h3>
+        Make it easy to come back to our wedding website from San Francisco or anwyere. 
+    </div>
+  
+    <div class="subnav"><a href="#venue">Top</a> </div>
+        
+    
+    </div> <!-- End 'Getting Here' -->
     
     
-    <div class="clear">      
-    <h3>Things to Do While You're Here</h3>
+<div class="content" id="sf">
+    <h2><strong>Whilst in SF...</strong></h2>
+    <img src="SF.jpg" />
+    <div class="clear">     </div>
+    <h3>Things to Do While You're Here</h3> 
     <a href="http://www.city-sightseeing.us/san-francisco-hop-on-hop-off-bus-tours.html">Hop-on-hop-off Bus Tours</a> - A convenient way to see the main attractions without a car.<br />
     <a href="http://www.blazingsaddles.com/san-francisco">Blazing Saddles Bike Rental</a> - Bike across the Golden Gate Bridge, or around the SF Marina.<br />
     <a href="http://gourmetwalks.com/tours/original-san-francisco-gourmet-chocolate-tour/">Foodie Walking Tours</a> - Sample the City's great chocolate or other local treats.<br />
@@ -369,20 +384,16 @@ strong {
      <a href="http://www.exploratorium.edu">Exploratorium</a> - Fun interactive science museum. Great for kids!<br />
      <a href="http://aquariumofthebay.org">Aquarium of the Bay</a> - Along with several other attractions at Pier 39, a great stop for families.<br />
       <a href="http://www.viamagazine.com/destinations/san-francisco-secrets">Secrets of San Francisco</a> - Via Magazine highlights lesser-known desinations in the City.<br />
-      Our favorite hiking and walking spots: Angel Island, Land's End Park, Muir Woods, city hilltop parks. <br />
+     <br />
+ Our favorite hiking and walking spots: Angel Island, Land's End Park, Muir Woods, city hilltop parks. <br /><br />
       Golden Gate Park has lots of attractions, in addition to great walking trails (and wedding venues!) : <a href="http://japaneseteagardensf.com/">Japanese Tea Garden</a>, <a href="http://www.conservatoryofflowers.org/">Conservatory of Flowers</a>, <a href="http://deyoung.famsf.org/exhibitions">DeYoung Museum</a>, <a href="http://www.calacademy.org/">California Academy of Sciences</a>.
     
     <br />
     <br />
-   	</div>
     
-    <div class="clear">
-    	<h3>Bookmark This Website</h3>
-        Make it easy to come back to our wedding website from San Francisco or anwyere. 
-    </div>
-  
-    <div class="subnav"><a href="#venue">Top</a> </div>
-</div>
+    </div><!-- End 'Things to do' -->
+    
+
 
 
 <div class="content" id="registry">
@@ -398,68 +409,65 @@ strong {
 <div class="content" id="story">
   <h2><strong>Our Story</strong></h2>
   <h3>Meeting</h3>
-  Cristi and Dave met over ten years ago at the Presidential Scholars recognition week in Washington D.C., during the summer of 2003. They had just graduated from high school and been accepted to Brown University. Though they were both dating other people at the time, they had an immediate respect for each others' intelligence and curiosity about the world, and became friends. <br />
+  Cristi and Dave met at the Presidential Scholars recognition week in Washington D.C., during the summer of 2003. They had just graduated from high school and been accepted to Brown University. They quickly became friends. <br /><br />
+<img src="Washington.jpg" />
   <br />
   At Brown the following fall, Cristi and Dave lived in the same freshman dorm building, and played poker and Settlers of Catan together with their friends. Cristi especially knew very few people entering Brown, and was always happy to see Dave's familiar face! <br />
   <br />
-  Dave studied computer science, advancing in the department and making many life-long friends, including all three of his groomsmen. Cristi deepened her love of language, choosing linguistics as a major, and writing for the College Hill Independent. At the end of sophomore year, their disparate groups of friends brought them back together by bringing them to rush events at Alpha Delta Phi, a coed fraternity. When they saw each other at these events, they both thought the same thing: "If a reasonable person like Dave/Cristi is doing this, it must be OK!", and so tricked themselves into pledging. <br />
+  Dave studied computer science, advancing in the department and making many life-long friends, including all three of his groomsmen. Cristi deepened her love of language, choosing linguistics as a major, and writing for the College Hill Independent. At the end of sophomore year, their disparate groups of friends brought them back together by inviting them to rush events at Alpha Delta Phi, a coed fraternity. When they saw each other at these events, they both thought the same thing: "If a reasonable person like Dave/Cristi is doing this, it must be OK!", and tricked themselves into pledging. <br />
   <br />
   <h3>Alpha Delta Phi</h3>
-  At Alpha Delta Phi, they had the opportunity to work together in new ways on events and as officers. Dave admired Cristi's creativity and fun-loving spirit, and Cristi was especially impressed by Dave's leadership qualities when he was elected president. It wasn't long before Groomsman Bill would declare her 'first lady'. <br />
-  <br />
-  In the spring of their senior year, when they were finally both single at the same time, Dave revealed to a mutual friend that he had a crush on Cristi. Coincidentally, Cristi revealed to the same friend that she couldn't imagine ever finding a more loyal and honest man than Dave. Beans were spilled, and within a few weeks, Cristi had knocked on Dave's dorm room door, and declared her feelings, which Dave heard with measured, thoughtful demeanor. She left, sure that she had ruined their long-standing friendship. Fifteen agonizing minutes later, Dave appeared at <em>her</em> door, and declared that he felt the same way! <br />
-  <br />
-  This might have been 'happily ever after' except that Dave was ready to move to San Francisco to take a job at Sun Microsystems, while Cristi was returning home to Oklahoma City to take an internship at Oklahoma Today magazine. <br />
+  At Alpha Delta Phi, they had the opportunity to work together in new ways as they chaired events and became officers. Cristi was especially impressed by Dave's leadership qualities when he was elected president. Late in their senior year, Groomsman Bill would declare Cristi 'first lady'. <br />
+    <br />
+  This might have been 'happily ever after' except that Dave was ready to move to San Francisco to take a job at Sun Microsystems, while Cristi was returning home to Oklahoma City to take an internship at Oklahoma Today magazine. <br /><br />
+  <img src="Graduation.jpg" />
   <br />
   <h3>After College</h3>
-  They decided to spend the first two weeks of that summer of 2007 driving across the country to situate Dave in San Francisco. If 39,000 miles together didn't drive them apart, nothing could. They pulled into San Francisco two weeks later, and parked on Fair Oaks street, a few blocks from the apartment Dave would share with Stephanie, Adam, and Bill. The great success of that road trip further cemented Dave and Cristi's feelings that they could live together, work together, and do anything together. But they were headed different directions. <br />
-  <br />
-  During the long six months of her internship, Dave and Cristi broke up. They tried to avoid meddling in each other's new lives, but couldn't stay out of touch for long. Abandoning her long-held assumption that she would return to the East Coast to look for a full-time job, Cristi decided that Dave outweighed the entire New York publishing world, and set out to look for jobs in the City by the Bay. <br />
-  <br />
-  In late 2007, both a job and an apartment materialized in San Francisco, and Cristi was off on another road trip, this time just one way. <br />
-  <br />
-  Since then, Dave and Cristi have both lived and worked happily in San Francisco. In summer 2008, they moved in together on the same little street where they'd found parking so long ago. Their apartment on Fair Oaks has seen lots of birthday, New Year's Eve, and Giants viewing parties, and made them realize they didn't want anything more than to continue living together for the rest of their lives. <br />
+  They decided to spend the first two weeks of summer 2007 driving across the country to situate Dave in San Francisco. If 3,900 miles together didn't drive them apart, nothing could. They pulled into San Francisco two weeks later, and parked on Fair Oaks street, a few blocks from the apartment Dave would share with Stephanie, Adam, and Bill. The success of that road trip further cemented Dave and Cristi's feelings that they could live together, work together, and do anything together. 
+  <br />  <br />
+  <img src="RoadTrip.jpg" /><br />
+   About two years later, they moved in together on the same little street where they'd found that first parking spot. <br />
   <br />
   <h3>Proposal</h3>
-  In the fall of 2013, they admitted to each other that they wanted to get married. Dave started shopping around for rings, and Cristi set up a wedding <a href="http://www.pinterest.com/claquer/wedding-stuff/">Pinterest page</a>. As fall ended, Dave suggested they go out at sunset, as they had done many times before, for Cristi to sketch and Dave to photograph the landscape. They agreed on Bernal Hill, but a holiday party prevented them from going in the evening. Cristi unwittingly suggested sunrise instead. <br />
+  In the fall of 2013, Dave started shopping for rings, and Cristi set up a wedding <a href="http://www.pinterest.com/claquer/wedding-stuff/">Pinterest page</a>. One weekend, Dave suggested they go out at sunset, as they had done many times before for Cristi to sketch and Dave to photograph the landscape. They agreed on Bernal Hill, but a holiday party prevented them from going in the evening. Cristi unwittingly suggested sunrise instead. <br />
   <br />
-  On the morning of Saturday, December 12, they got up extremely early and drove to Bernal Hill in San Francisco. Cristi considered that Dave might be up to something, but his calm demeanor belied his life-changing intentions. When they got up the hill, Cristi took out her oil pastels and started sketching, and shooed Dave off to take photos. He came back a few minutes later and began to talk about the city, and all they had been through to get here together. Cristi started to tear up. Dave kneeled down, produced a ring box, and asked Cristi to marry him. She started nodding and crying, and didn't manage to actually say 'yes' until Dave repeatedly asked for confirmation. <br />
+  On the morning of Saturday, December 12, they got up extremely early and drove to Bernal Hill in San Francisco. Cristi considered that Dave might be up to something, but his characeristically calm demeanor belied his intentions. When they got up the hill, Dave got down on one knee and asked her to marry him. Cristi started nodding and crying, and didn't manage to actually say 'yes' until Dave repeatedly asked for confirmation. <br />
   <br />
-  They spent the rest of the morning drinking the champagne Dave had hidden on the hill the night before, and calling their families, who mostly asked what had taken so long.<br />
-  <img src="ChrisNDave.jpg" />
+  They spent the rest of the morning drinking the champagne Dave had hidden on the hill the night before, and calling their families, who mostly asked what had taken so long.<br /><br />
+  <img src="Ring.jpg" />
   <div class="subnav"><a href="#story">Top</a> </div>
   
 </div>
   
-  <div class="content" id="weddingparty">
+  
+  
+<div class="content" id="weddingparty">
     <h2><strong>Wedding Party</strong></h2>
-    <h3>Bridesmaids: Is there a doctor in the house?</h3>
-    <div><img src="Natalia.jpg" /><strong>Natalia Bilenko</strong>, Maid of Honor<br />
-      Cristi and Natalia met during their freshman year at Brown. Even though Nataila pledged the <em>other</em> coed fraternity on campus, they remained close friends and were thrilled to eventually end up in the Bay Area together. Natalia is a neuroscience PhD student at Berkeley.<br />
-      <span class="caption">Shown here watching the first dance at Adam and Stephanie's wedding in June 2013 with Cristi.</span></div>
-    <div><img src="Stephanie.jpg" /> <strong>Stephanie Greer</strong>, Bridesmaid <br />
-      Stephanie was in Alpha Delta Phi with Dave and Cristi, and now she and her husband Adam live about four blocks from the happy couple in the Mission district. She graduated in 2013 with a PhD in neuroscience from Berkeley, and now works on brain training apps at TidePool.<br />
+   <h3>On the Bride's Side</h3>
+   <div class="clear" >
+    <div><img src="Natalia.jpg" /><strong>Natalia Bilenko</strong>, Maid of Honor
+      <span class="caption">Shown here with Cristi at Adam and Stephanie's wedding in June 2013.</span></div>
+    <div><img src="Stephanie.jpg" /> <strong>Stephanie Greer</strong>, Bridesmaid 
       <span class="caption">Shown here on honeymoon in Iceland with Adam.</span></div>
-    <div><img src="Cristy.jpg" /> <strong>Cristina Pacheco</strong>, Bridesmaid, Sister of the Groom <br />
-      Cristy is Dave's older sister by 7 years. She taught him many things including how to read, and that being nice is more important than being right. She is a family doctor in Massachusetts. Cristy and her husband, John Kawaoka, will celebrate their 11th wedding anniversary this June 6. They have two children, flowergirl Maddie, and ringbearer Danny. <br />
+    <div><img src="Cristy.jpg" /> <strong>Cristina Pacheco Kawaoka</strong>, Bridesmaid, Sister of the Groom<br />
       <span class="caption">Shown here at her wedding with John in 2004.</span></div>
     <div><img src="Maddie.jpg" /> <strong>Madeleine</strong>, Flower Girl, Niece of the Groom<br />
-      Maddie is the daughter of John Kawaoka and bridesmaid Cristy. She is eight years old and in first grade in Massachusetts. <br />
       <span class="caption">Shown playing softball.</span> </div>
+    </div>
     <br />
-    <h3>Groomsmen: They can fix your computer!</h3>
-    <div><img src="Bill.jpg" /> <strong>Bill Pijewski</strong>, Best Man<br />
-      Bill was the pledge master at Alpha Delta Phi when Dave and Cristi pledged. He graduated from Brown with a degree in computer science in 2007 with Dave, Adam, and Dan. He and his wife, Meg Desko are world travelers. They got married in April 2013 and went on safari in Africa for their honeymoon. <br />
+    <br />
+     <br />
+		 <h3 class="clear">Team Groom</h3>
+   <div class="clear">
+    <div><img src="Bill.jpg" /> <strong>Bill Pijewski</strong>, Best Man
       <span class="caption">Shown on vacation in China with his wife, Meg.</span></div>
-    <div><img src="Adam.jpg" /> <strong>Adam Cath</strong>, Groomsman<br />
-      Adam and his wife, bridesmaid Stephanie, took up hang gliding a few years ago, and Adam now regularly soars at Fort Funston in San Francisco. He plays trumpet in salsa band Conjunto Picante. Adam works at App Dynamics with groomsmen Bill and Dan. <br />
+    <div><img src="Adam.jpg" /> <strong>Adam Cath</strong>, Groomsman
       <span class="caption">Shown here at his wedding to Stephanie in June 2013.</span> </div>
-    <div><img src="Dan.jpg" /><strong>Dan Heller</strong>, Groomsman <br />
-      Dan Heller is a software engineer who worked at Apple for several years before joining Bill and Adam at App Dynamics. Guaranteed to bring the party, Dan Heller loves music from country western to electronic dance music, is a film buff with an encyclopaedic knowledge of the Simpsons, and also speaks Dutch. <br />
+    <div><img src="Dan.jpg" /><strong>Dan Heller</strong>, Groomsman
        <span class="caption">Shown here dancing with Stephanie at Bill and Meg's wedding in April 2013.</span></div>
     <div><img src="Danny.jpg" /><strong>Danny</strong>, Ringbearer, Nephew of the Groom<br />
-      Danny is two years old. He is the little brother of Maddie, and son of Cristy and John Kawaoka. <br />
       <span class="caption">Shown here on his first birthday in 2013.</span></div>
+   </div><br /><br /><br /><br /><br /><br /><br />
     <br />
     <div class="subnav"><a href="#weddingparty">Top</a></div>
   </div>
