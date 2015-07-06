@@ -28,7 +28,7 @@
 		 document.getElementById('date').innerHTML="Days until the wedding: "+Math.round(count);  
 	 }
 	 else {
-		  document.getElementById('date').innerHTML="We've been married for: "+Math.round(count)+" days!";
+		  document.getElementById('date').innerHTML="We've been married for "+Math.abs(Math.round(count))+" days!";
 	 }
  }
 
@@ -36,7 +36,6 @@
 
  function loadContent() {
 	 	
-		
 	var contentElements = document.getElementsByClassName('content');
 	 for (i=0; i<contentElements.length; i++) {
 	 contentElements[i].style.display="none";
@@ -51,15 +50,14 @@
 	 	}
 		
 		countdown();
-
  }
  
  
  var imageCount = 0; 
  
  function switchImage() {
-	 var images = ["ChrisNDave.jpg","Scotland.jpg","KissOnTheBeach.jpg", "GiantsGame.jpg", "Kayak.jpg", "Denmark.jpg", "5thReunion.jpg", "Hawaii.jpg",  "AandSWedding.jpg"];
-	 var captions = ["Chris and Dave on the morning we got engaged, December 14, 2013.",
+	 var images = ["recessional-bw.jpg","ChrisNDave.jpg","Scotland.jpg","KissOnTheBeach.jpg", "GiantsGame.jpg", "Kayak.jpg", "Denmark.jpg", "5thReunion.jpg", "Hawaii.jpg",  "AandSWedding.jpg"];
+	 var captions = ["The new Mr. and Mrs. Pacheco, June 6, 2015.","Chris and Dave on the morning we got engaged, December 14, 2013.",
 	 "At Inveraray Castle, Scotland, September 2014.",
 	 "At Sea Ranch for New Year's 2014. Photo credit Zack Reiss-Davis.", 
 	 "Behind home plate at a Giants game! Note Buster Posey taking the field behind us.",
@@ -82,24 +80,18 @@
  
 
 </script>
-
-
-
 <style type="text/css">
-
-  /****** Site Text Styles ******/
+/****** Site Text Styles ******/
 @font-face {
 font-family:Body;
 src: url(Garogier.ttf);
 }
-
 .clear {
 	clear:both;
 	margin-bottom:15px;
 	display:inline-block;
 	width:100%;
 }
-
 .caption {
 	font-size:12px;
 	font-style:italic;
@@ -123,13 +115,11 @@ strong {
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-weight:bold;
 }
-
-
-	/****** Site Structure ******/
+/****** Site Structure ******/
 body {
 	background-color:#faddc6;
 	text-align:center;
-	background-image:url(Skylight_Pattern_100.png);  
+	background-image:url(Skylight_Pattern_100.png);
 	background-size:50px;
 	font-family:Body;
 	margin:0;
@@ -195,9 +185,7 @@ body {
 #homeImage {
 	cursor: pointer
 }
-
-
-	/****** Individual Page Styes ******/
+/****** Individual Page Styes ******/
 #weddingparty img {
 	height:auto;
 	width:100%;
@@ -212,10 +200,10 @@ body {
 	height:250px;
 }
 #venue img {
-	width:75%;	
+	width:75%;
 }
 #story img {
-	width:50%;	
+	width:50%;
 	margin-left:auto;
 	margin-right:auto;
 	position:static;
@@ -225,10 +213,7 @@ iframe {
 	width:100%;
 	height:350px;
 }
-
-
-
-@media screen and (max-width : 480px) {
+ @media screen and (max-width : 480px) {
 body {
  background-image:none;
  background-color:#ffffff;
@@ -240,11 +225,11 @@ body {
  width:100%;
 }
 #header {
-	height:0px;
-	margin:0px;
+ height:0px;
+ margin:0px;
 }
 .headerImage {
-	display: none;
+ display: none;
 }
 .content {
  width:90%;
@@ -254,7 +239,7 @@ body {
  z-index:6;
  background-color:#ffffff;
 }
-#nav { 
+#nav {
  position:relative;
  top:0;
  left:0;
@@ -266,212 +251,191 @@ body {
  font-size:20px;
 }
 #story img {
-	width: 100%;
+ width: 100%;
 }
 iframe {
-	height:150px;
+ height:150px;
 }
 #weddingparty .clear div {
-	display:block;
-	float:left;
-	clear:both;
-	margin-bottom:10px;
-	margin-right:0%;
-	width:100%;
-	height:auto;
+ display:block;
+ float:left;
+ clear:both;
+ margin-bottom:10px;
+ margin-right:0%;
+ width:100%;
+ height:auto;
 }
 }
 </style>
 </head>
 
 <body onLoad="loadContent();" onhashchange="loadContent();" >
-<div id="header">
-</div>
+<div id="header"> </div>
 <img src="Web-header-text-white.png" class="headerImage" />
-
 <div id="main">
-<div id="nav">
-  <div><a href="#home">Home</a></div>
-  <div><a href="#venue">Getting Here</a></div>
-  <div><a href="#sf">Things to Do</a></div>
- <div><a href="#registry">Registry</a></div>
- 
-
-  <div><a href="#story">Our Story</a></div>
-  <div><a href="#weddingparty">Wedding Party</a></div>
-
-</div>
-
-<div class="content" id="home">
-  <h2><strong>Welcome</strong></h2>
-  
-  <div id="date">#</div>
-  <p>Dave and Cristi are getting hitched on June 6, 2015! Look around to learn about the venue, where to stay, and how to get here.<br />
-    <br />
-    Click the picture below to see more. </p>
-  <img id="homeImage" src="ChrisNDave.jpg" onclick="switchImage();" />
-  <p id="homeImageCaption">Chris and Dave on the morning we got engaged, December 14, 2013.</p>
-</div>
-
-
-<div class="content" id="venue">
-  <h2><strong>If You're Coming to San Francisco...</strong></h2>
-
-  <div class="clear">
- <!-- <img src="http://media-cache-ak0.pinimg.com/736x/70/c5/d5/70c5d53f4da017754c2753d09a537b46.jpg" style="float:right; width:50%; margin-left:8px; margin-bottom:8px" />  -->
-<h3>June 6, 2014</h3>
-<strong>5pm</strong> &nbsp;The wedding ceremony will take place at at the <a href="http://www.golden-gate-park.com/queen-wilhelmina-tulip-garden.html">Queen Wilhelmina Tulip Garden</a> in San Francisco, at the far west end of Golden Gate Park. <br />
-<strong>6pm</strong>  &nbsp;We'll walk across the street for drinks, dinner, and dancing at the <a href="http://parkchalet.com/">Park Chalet Garden Restaurant</a>.
-</div>
-  
-  <div class="clear">
-  <h3>Map of the Wedding Location</h3>
-  <!-- Embed Google Map -->
-<iframe style="width:100%; border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Park%20Chalet%20Garden%20Restaurant%2C%20Great%20Highway%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCMkccAAS307Ko0nRecHObNXbtj4T-QeIY"></iframe> 
-   <!-- End Embed Google Map -->
+  <div id="nav">
+    <div><a href="#home">Home</a></div>
+    <div><a href="#venue">Getting Here</a></div>
+    <div><a href="#sf">Things to Do</a></div>
+    <div><a href="#registry">Registry</a></div>
+    <div><a href="#story">Our Story</a></div>
+    <div><a href="#weddingparty">Wedding Party</a></div>
   </div>
-  
-  <div class="clear">
-    <h3>Hotel Information</h3>
-    We've reserved a block of rooms at the Hotel Abri near Union Square at 127 Ellis Street, SF, CA. <br/>
-    <a href="https://www.google.com/maps/place/Hotel+Abri/@37.785328,-122.408484,15z/data=!4m2!3m1!1s0x0:0x1ffa13bc7c312063">View a map of the hotel location</a>.<br /><br />
-    <a href="http://hotelabrisf.com/laquerandpachecoweddingblock/">Click to reserve online</a> or call (415) 392-8800 | (888) 229-0677<br />
-    If you call, ask for the Laquer-Pacheco room block to get a discounted room rate of $199 per night for June 5 and 6.  Please book early!  A small number of rooms are available, and they will only be held until May 5.  (If the block fills up, please let us know and we'll try to get more rooms.)<br /><br />
-    </div>
-    
-    
+  <div class="content" id="home">
+    <h2><strong>Welcome</strong></h2>
+    <div id="date">#</div>
+    <p>Dave and Cristi got hitched on June 6, 2015. See the wedding photo gallery <a href="http://ebphotography.pixieset.com/davidandchristine/" target="_blank">here at E&B photography's website</a>. Or click the picture below to see more. </p>
+    <img id="homeImage" src="recessional-bw.jpg" onclick="switchImage();" />
+    <p id="homeImageCaption">The new Mr. and Mrs. Pacheco, June 6, 2015.</p>
+  </div>
+  <div class="content" id="venue">
+    <h2><strong>If You're Coming to San Francisco...</strong></h2>
     <div class="clear">
-    
-    <h3>Getting to the Wedding, and Around San Francisco</h3>
-    We'll be arranging transportation from Union Square to the wedding venue. <br/><br />
-    To get around the city, we recommend <a href="https://www.uber.com/">Uber</a> or <a href="https://www.lyft.com/">Lyft</a>. These apps allow you to quickly call a car to your location. Taxis are easy to find in some parts of the city, but not near the Park Chalet.<br /><br />
-    
-    Public transit is reliable for getting around downtown, Union Square, Mission District, and other neighborhoods in San Francisco. Visit <a href="http://511.org/">511.org</a> for specific route information.<br /><br />
+      <h3>June 6, 2014</h3>
+      <strong>5pm</strong> &nbsp;The wedding ceremony will take place at at the <a href="http://www.golden-gate-park.com/queen-wilhelmina-tulip-garden.html">Queen Wilhelmina Tulip Garden</a> in San Francisco, at the far west end of Golden Gate Park. <br />
+      <strong>6pm</strong> &nbsp;We'll walk across the street for drinks, dinner, and dancing at the <a href="http://parkchalet.com/">Park Chalet Garden Restaurant</a>. </div>
+    <div class="clear">
+      <h3>Map of the Wedding Location</h3>
+      <!-- Embed Google Map -->
+      <iframe style="width:100%; border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Park%20Chalet%20Garden%20Restaurant%2C%20Great%20Highway%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyCMkccAAS307Ko0nRecHObNXbtj4T-QeIY"></iframe>
+      <!-- End Embed Google Map --> 
     </div>
-        <div class="clear">
-    	<h3>Bookmark This Website</h3>
-        Make it easy to come back to our wedding website from San Francisco or anywhere. 
+    <div class="clear">
+      <h3>Hotel Information</h3>
+      We've reserved a block of rooms at the Hotel Abri near Union Square at 127 Ellis Street, SF, CA. <br/>
+      <a href="https://www.google.com/maps/place/Hotel+Abri/@37.785328,-122.408484,15z/data=!4m2!3m1!1s0x0:0x1ffa13bc7c312063">View a map of the hotel location</a>.<br />
+      <br />
+      <a href="http://hotelabrisf.com/laquerandpachecoweddingblock/">Click to reserve online</a> or call (415) 392-8800 | (888) 229-0677<br />
+      If you call, ask for the Laquer-Pacheco room block to get a discounted room rate of $199 per night for June 5 and 6.  Please book early!  A small number of rooms are available, and they will only be held until May 5.  (If the block fills up, please let us know and we'll try to get more rooms.)<br />
+      <br />
     </div>
-  
+    <div class="clear">
+      <h3>Getting to the Wedding, and Around San Francisco</h3>
+      We'll be arranging transportation from Union Square to the wedding venue. <br/>
+      <br />
+      To get around the city, we recommend <a href="https://www.uber.com/">Uber</a> or <a href="https://www.lyft.com/">Lyft</a>. These apps allow you to quickly call a car to your location. Taxis are easy to find in some parts of the city, but not near the Park Chalet.<br />
+      <br />
+      Public transit is reliable for getting around downtown, Union Square, Mission District, and other neighborhoods in San Francisco. Visit <a href="http://511.org/">511.org</a> for specific route information.<br />
+      <br />
+    </div>
+    <div class="clear">
+      <h3>Bookmark This Website</h3>
+      Make it easy to come back to our wedding website from San Francisco or anywhere. </div>
     <div class="subnav"><a href="#venue">Top</a> </div>
-        
-    
-    </div> <!-- End 'Getting Here' -->
-    
-    
-<div class="content" id="sf">
+  </div>
+  <!-- End 'Getting Here' -->
+  
+  
+  
+  
+  <div class="content" id="sf">
     <h2><strong>Whilst in SF...</strong></h2>
     <img src="SF.jpg" />
-    <div class="clear">     </div>
-    <h3>Things to Do While You're Here</h3> 
+    <div class="clear"> </div>
+    <h3>Things to Do While You're Here</h3>
     <a href="http://www.city-sightseeing.us/san-francisco-hop-on-hop-off-bus-tours.html">Hop-on-hop-off Bus Tours</a> - A convenient way to see the main attractions without a car.<br />
     <a href="http://www.blazingsaddles.com/san-francisco">Blazing Saddles Bike Rental</a> - Bike across the Golden Gate Bridge, or around the SF Marina.<br />
     <a href="http://gourmetwalks.com/tours/original-san-francisco-gourmet-chocolate-tour/">Foodie Walking Tours</a> - Sample the City's great chocolate or other local treats.<br />
     <a href="http://www.alcatrazislandtickets.com/">Alcatraz</a> - Book ahead for tours, or just <a href="http://www.hornblower.com/home/sf">take a bay cruise</a> for amazing views of the city.<br />
     <a href="http://www.cablecarmuseum.org/">Cable Car Museum</a> - A <em>free</em> look behind the scenes at the country's only mobile historic landmark. Take a cable car to get there.<br />
-     <a href="http://www.exploratorium.edu">Exploratorium</a> - Fun interactive science museum. Great for kids!<br />
-     <a href="http://aquariumofthebay.org">Aquarium of the Bay</a> - Along with several other attractions at Pier 39, a great stop for families.<br />
-      <a href="http://www.viamagazine.com/destinations/san-francisco-secrets">Secrets of San Francisco</a> - Via Magazine highlights lesser-known desinations in the City.<br />
-     <br />
- Our favorite hiking and walking spots: <a href="http://www.parks.ca.gov/?page_id=468">Angel Island</a>, <a href="http://www.nps.gov/goga/planyourvisit/landsend.htm">Land's End Park</a>, <a href="http://www.nps.gov/muwo/index.htm">Muir Woods</a>, <a href="http://www.thebolditalic.com/articles/5032-a-guide-to-san-franciscos-lesser-known-parks">city hilltop parks</a>. <br /><br />
-      Golden Gate Park has lots of attractions, in addition to great walking trails (and wedding venues!) : <a href="http://japaneseteagardensf.com/">Japanese Tea Garden</a>, <a href="http://www.conservatoryofflowers.org/">Conservatory of Flowers</a>, <a href="http://deyoung.famsf.org/exhibitions">DeYoung Museum</a>, <a href="http://www.calacademy.org/">California Academy of Sciences</a>.
-    <br /> 
+    <a href="http://www.exploratorium.edu">Exploratorium</a> - Fun interactive science museum. Great for kids!<br />
+    <a href="http://aquariumofthebay.org">Aquarium of the Bay</a> - Along with several other attractions at Pier 39, a great stop for families.<br />
+    <a href="http://www.viamagazine.com/destinations/san-francisco-secrets">Secrets of San Francisco</a> - Via Magazine highlights lesser-known desinations in the City.<br />
+    <br />
+    Our favorite hiking and walking spots: <a href="http://www.parks.ca.gov/?page_id=468">Angel Island</a>, <a href="http://www.nps.gov/goga/planyourvisit/landsend.htm">Land's End Park</a>, <a href="http://www.nps.gov/muwo/index.htm">Muir Woods</a>, <a href="http://www.thebolditalic.com/articles/5032-a-guide-to-san-franciscos-lesser-known-parks">city hilltop parks</a>. <br />
+    <br />
+    Golden Gate Park has lots of attractions, in addition to great walking trails (and wedding venues!) : <a href="http://japaneseteagardensf.com/">Japanese Tea Garden</a>, <a href="http://www.conservatoryofflowers.org/">Conservatory of Flowers</a>, <a href="http://deyoung.famsf.org/exhibitions">DeYoung Museum</a>, <a href="http://www.calacademy.org/">California Academy of Sciences</a>. <br />
     <br />
     <img src="SF2.jpg" /><br />
     <div class="caption">Photos credit Dave Pacheco.</div>
     <br />
-     <div class="subnav"><a href="#sf">Top</a> </div>
-    </div><!-- End 'Things to do' -->
-    
-
-
-
-<div class="content" id="registry">
-
-  <h2><strong>Gift Registry</strong></h2>
-	<div class="clear">Your presence and support at our wedding is the best gift we could hope for! Nothing else is required.
-    </div>
-    <img src="http://www.bedbathandbeyond.com/_assets/global/images/hero/store_front.png" align="left" style="width:25%; height:auto; margin-right:2%;" />For those wishing to purchase a gift, we are registered at Bed Bath & Beyond. Ask for the Laquer Pacheco registry, or 
-<a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=541937057&eventType=Wedding&pwsurl=?mcid=EM_triggeredem_emailregistryplural__allpromos">click here for the online registry</a>.<br />
-<br />
- Additional bridal shower gifts are at <a href="http://www.myregistry.com/wishlist/Christine-Laquer-San-Francisco-CA/825257">myregistry.com</a>.
-</div>
-
-
-<div class="content" id="story">
-  <h2><strong>Our Story</strong></h2>
-  <h3>Meeting</h3>
-  Cristi and Dave met at the Presidential Scholars recognition week in Washington D.C., during the summer of 2003. They had just graduated from high school and been accepted to Brown University. They quickly became friends. <br /><br />
-<img src="Washington.jpg" />
-  <br />
-  At Brown the following fall, Cristi and Dave lived in the same freshman dorm building, and played poker and Settlers of Catan together with their friends. Cristi especially knew very few people entering Brown, and was always happy to see Dave's familiar face! <br />
-  <br />
-  Dave studied computer science, advancing in the department and making many life-long friends, including all three of his groomsmen. Cristi deepened her love of language, choosing linguistics as a major, and writing for the College Hill Independent. At the end of sophomore year, their disparate groups of friends brought them back together by inviting them to rush events at Alpha Delta Phi, a coed fraternity. When they saw each other at these events, they both thought the same thing: "If a reasonable person like Dave/Cristi is doing this, it must be OK!", and so tricked themselves into pledging. <br />
-  <br />
-  <h3>Alpha Delta Phi</h3>
-  At Alpha Delta Phi, they had the opportunity to work together in new ways as they chaired events and became officers. Cristi was especially impressed by Dave's leadership qualities when he was elected president. Late in their senior year, Groomsman Bill would declare Cristi 'first lady'. <br />
-    <br />
-  This might have been 'happily ever after' except that Dave was ready to move to San Francisco to take a job at Sun Microsystems, while Cristi was returning home to Oklahoma City to take an internship at Oklahoma Today magazine. <br /><br />
-  <img src="Graduation.jpg" />
-  <br />
-  <h3>After College</h3>
-  They decided to spend the first two weeks of summer 2007 driving across the country to situate Dave in San Francisco. If 3,900 miles together didn't drive them apart, nothing could. They pulled into San Francisco two weeks later, and parked on Fair Oaks street, a few blocks from the apartment Dave would share with Adam, Stephanie, and Bill. The success of that road trip confirmed Dave and Cristi's feelings that they could live together, work together, and do anything together. 
-  <br />  <br />
-  <img src="RoadTrip.jpg" /><br />
-   About two years later, they moved into an apartment on the same little street where they'd found that first parking spot. <br />
-  <br />
-  <h3>Proposal</h3>
-  In the fall of 2013, Dave started shopping for rings, and Cristi set up a wedding <a href="http://www.pinterest.com/claquer/wedding-stuff/">Pinterest page</a>. One weekend in December, Dave suggested they go out at sunset, as they had done many times before for Cristi to sketch and Dave to photograph the landscape. They agreed on Bernal Hill, but a holiday party prevented them from going in the evening. Cristi unwittingly suggested sunrise instead. <br />
-  <br />
-  On the morning of Saturday, December 12, they got up extremely early and drove to Bernal Hill in San Francisco. Cristi considered that Dave might be up to something, but his characeristically calm demeanor belied his intentions. When they got up the hill, Dave got down on one knee and asked her to marry him. Cristi immediately started nodding and crying, and didn't manage to actually say 'yes' until Dave repeatedly asked for confirmation. <br />
-  <br />
-  They spent the rest of the morning drinking the champagne Dave had hidden on the hill the night before, and calling their families, who mostly asked what had taken so long.<br /><br />
-  <img src="Ring.jpg" />
-  <div class="subnav"><a href="#story">Top</a> </div>
+    <div class="subnav"><a href="#sf">Top</a> </div>
+  </div>
+  <!-- End 'Things to do' -->
   
-</div>
+  
+  
+  
+ <div class="content" id="registry">
+    <h2><strong>Gift Registry</strong></h2>
+    <div class="clear">Your presence and support at our wedding is the best gift we could hope for! Nothing else is required. </div>
+    <img src="http://www.bedbathandbeyond.com/_assets/global/images/hero/store_front.png" align="left" style="width:25%; height:auto; margin-right:2%;" />For those wishing to purchase a gift, we are registered at Bed Bath & Beyond. Ask for the Laquer Pacheco registry, or <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=541937057&eventType=Wedding&pwsurl=?mcid=EM_triggeredem_emailregistryplural__allpromos">click here for the online registry</a>.<br />
+    <br />
+    Additional bridal shower gifts are at <a href="http://www.myregistry.com/wishlist/Christine-Laquer-San-Francisco-CA/825257">myregistry.com</a>. </div>
+    <!-- End 'Registry' -->
+    
+    
+ <div class="content" id="story">
+    <h2><strong>Our Story</strong></h2>
+    <h3>Meeting</h3>
+    Cristi and Dave met at the Presidential Scholars recognition week in Washington D.C., during the summer of 2003. They had just graduated from high school and been accepted to Brown University. They quickly became friends. <br />
+    <br />
+    <img src="Washington.jpg" /> <br />
+    At Brown the following fall, Cristi and Dave lived in the same freshman dorm building, and played poker and Settlers of Catan together with their friends. Cristi especially knew very few people entering Brown, and was always happy to see Dave's familiar face! <br />
+    <br />
+    Dave studied computer science, advancing in the department and making many life-long friends, including all three of his groomsmen. Cristi deepened her love of language, choosing linguistics as a major, and writing for the College Hill Independent. At the end of sophomore year, their disparate groups of friends brought them back together by inviting them to rush events at Alpha Delta Phi, a coed fraternity. When they saw each other at these events, they both thought the same thing: "If a reasonable person like Dave/Cristi is doing this, it must be OK!", and so tricked themselves into pledging. <br />
+    <br />
+    <h3>Alpha Delta Phi</h3>
+    At Alpha Delta Phi, they had the opportunity to work together in new ways as they chaired events and became officers. Cristi was especially impressed by Dave's leadership qualities when he was elected president. Late in their senior year, Groomsman Bill would declare Cristi 'first lady'. <br />
+    <br />
+    This might have been 'happily ever after' except that Dave was ready to move to San Francisco to take a job at Sun Microsystems, while Cristi was returning home to Oklahoma City to take an internship at Oklahoma Today magazine. <br />
+    <br />
+    <img src="Graduation.jpg" /> <br />
+    <h3>After College</h3>
+    They decided to spend the first two weeks of summer 2007 driving across the country to situate Dave in San Francisco. If 3,900 miles together didn't drive them apart, nothing could. They pulled into San Francisco two weeks later, and parked on Fair Oaks street, a few blocks from the apartment Dave would share with Adam, Stephanie, and Bill. The success of that road trip confirmed Dave and Cristi's feelings that they could live together, work together, and do anything together. <br />
+    <br />
+    <img src="RoadTrip.jpg" /><br />
+    About two years later, they moved into an apartment on the same little street where they'd found that first parking spot. <br />
+    <br />
+    <h3>Proposal</h3>
+    In the fall of 2013, Dave started shopping for rings, and Cristi set up a wedding <a href="http://www.pinterest.com/claquer/wedding-stuff/">Pinterest page</a>. One weekend in December, Dave suggested they go out at sunset, as they had done many times before for Cristi to sketch and Dave to photograph the landscape. They agreed on Bernal Hill, but a holiday party prevented them from going in the evening. Cristi unwittingly suggested sunrise instead. <br />
+    <br />
+    On the morning of Saturday, December 12, they got up extremely early and drove to Bernal Hill in San Francisco. Cristi considered that Dave might be up to something, but his characeristically calm demeanor belied his intentions. When they got up the hill, Dave got down on one knee and asked her to marry him. Cristi immediately started nodding and crying, and didn't manage to actually say 'yes' until Dave repeatedly asked for confirmation. <br />
+    <br />
+    They spent the rest of the morning drinking the champagne Dave had hidden on the hill the night before, and calling their families, who mostly asked what had taken so long.<br />
+    <br />
+    <img src="Ring.jpg" />
+    <div class="subnav"><a href="#story">Top</a> </div>
+  </div>
+  <!-- End 'Our Story' -->
   
   
   
 <div class="content" id="weddingparty">
     <h2><strong>Wedding Party</strong></h2>
-   <h3>On the Bride's Side</h3>
-   <div class="clear" >
-    <div><img src="Natalia.jpg" /><strong>Natalia Bilenko</strong>, Maid of Honor
+    <h3>On the Bride's Side</h3>
+    <div class="clear" >
+      <div><img src="Natalia.jpg" /><strong>Natalia Bilenko</strong>, Maid of Honor </div>
+      <div><img src="Stephanie.jpg" /> <strong>Stephanie Greer</strong>, Bridesmaid </div>
+      <div><img src="Cristy.jpg" /> <strong>Cristina Pacheco Kawaoka</strong>, Bridesmaid, Sister of the Groom<br />
       </div>
-    <div><img src="Stephanie.jpg" /> <strong>Stephanie Greer</strong>, Bridesmaid 
-     </div>
-    <div><img src="Cristy.jpg" /> <strong>Cristina Pacheco Kawaoka</strong>, Bridesmaid, Sister of the Groom<br />
-      </div>
-    <div><img src="Maddie.jpg" /> <strong>Madeleine</strong>, Flower Girl, Niece of the Groom<br />
+      <div><img src="Maddie.jpg" /> <strong>Madeleine</strong>, Flower Girl, Niece of the Groom<br />
       </div>
     </div>
     <br />
     <br />
-     <br />
-		 <h3>Team Groom</h3>
-   <div class="clear">
-    <div><img src="Bill.jpg" /> <strong>Bill Pijewski</strong>, Best Man
+    <br />
+    <h3>Team Groom</h3>
+    <div class="clear">
+      <div><img src="Bill.jpg" /> <strong>Bill Pijewski</strong>, Best Man </div>
+      <div><img src="Adam.jpg" /> <strong>Adam Cath</strong>, Groomsman </div>
+      <div><img src="Dan.jpg" /><strong>Dan Heller</strong>, Groomsman </div>
+      <div><img src="Danny.jpg" /><strong>Danny</strong>, Ringbearer, Nephew of the Groom<br />
       </div>
-    <div><img src="Adam.jpg" /> <strong>Adam Cath</strong>, Groomsman
-     </div>
-    <div><img src="Dan.jpg" /><strong>Dan Heller</strong>, Groomsman
-       </div>
-    <div><img src="Danny.jpg" /><strong>Danny</strong>, Ringbearer, Nephew of the Groom<br />
-     </div>
-   </div><br /><br /><br /><br /><br /><br /><br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <div class="subnav"><a href="#weddingparty">Top</a></div>
   </div>
-  
-  
-  
-<div class="content" id="rsvp">
-Coming soon!
-</div>
-  
-</div> <!-- End Main -->
+<!-- End 'Wedding Party' -->
+    
 
+</div>
+<!-- End Main -->
 
 </body>
 </html>
